@@ -17,21 +17,15 @@ def set_color(red, green, blue):
     g.value(green)
     b.value(blue)
 
+BETA = 3950.0 #Found these values online after debugging
+T0 = 298.15
+
 def read_temperature():
-    adc_value = adc.read_u16()
-    voltage = adc_value * 3.3 / 65535
+    analog_value = adc.read_u16()
+    voltage = analog_value * 3.3
 
-    resistor = 10000
-    ntc_resistance = resistor * (3.3 / voltage - 1)
-
-    R25 = 10000
-    B_coefficient = 3950
-    Tref = 298.15
-
-    temperature_kelvin = 1 / (1 / Tref + 1 / B_coefficient * math.log(ntc_resistance / R25))
-    temperature_celsius = temperature_kelvin - 273.15
-
-    return temperature_celsius
+    celsius = 1 / (math.log(1 / (3.3 / voltage - 1)) / BETA + 1.0 / T0) - 273.15
+    return celsius
 
 while True:
     temperature = int(read_temperature())
@@ -46,4 +40,4 @@ while True:
     else:
         set_color(1, 0, 0)
 
-    time.sleep(1)
+    time.sleep(0.5)
