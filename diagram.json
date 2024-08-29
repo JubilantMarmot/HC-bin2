@@ -13,8 +13,8 @@
     {
       "type": "wokwi-rgb-led",
       "id": "wokwi-rgb-led-1",
-      "top": -53.6,
-      "left": -37.3,
+      "top": 13.6,
+      "left": -123.7,
       "attrs": { "common": "cathode" }
     },
     {
@@ -47,20 +47,22 @@
     }
   ],
   "connections": [
-    [ "wokwi-rgb-led-1:COM", "pico:GND.1", "green", [ "v0" ] ],
     [ "pico:GP22", "wokwi-dht22-1:SDA", "green", [ "h0" ] ],
     [ "wokwi-dht22-1:VCC", "pico:3V3", "red", [ "v0" ] ],
     [ "wokwi-dht22-1:GND", "pico:GND.4", "black", [ "v0" ] ],
     [ "wokwi-pir-motion-sensor-1:VCC", "pico:3V3", "red", [ "v0" ] ],
     [ "wokwi-pir-motion-sensor-1:GND", "pico:GND.8", "black", [ "v0" ] ],
     [ "wokwi-pir-motion-sensor-1:OUT", "pico:GP28", "green", [ "v76.8", "h-58.94" ] ],
-    [ "wokwi-photoresistor-sensor-1:DO", "pico:GP5", "green", [ "h9.6", "v143.4" ] ],
+    [ "wokwi-photoresistor-sensor-1:DO", "pico:GP5", "green", [ "h86.4", "v85.8" ] ],
     [ "wokwi-photoresistor-sensor-1:GND", "pico:GND.1", "black", [ "h0" ] ],
     [ "wokwi-photoresistor-sensor-1:VCC", "pico:3V3", "red", [ "h0" ] ],
     [ "wokwi-lcd1602-1:VCC", "pico:3V3", "red", [ "h-9.6", "v-76.7" ] ],
     [ "wokwi-lcd1602-1:GND", "pico:GND.6", "black", [ "h0" ] ],
     [ "wokwi-lcd1602-1:SDA", "pico:GP0", "green", [ "h0" ] ],
-    [ "wokwi-lcd1602-1:SCL", "pico:GP1", "green", [ "h0" ] ]
+    [ "wokwi-lcd1602-1:SCL", "pico:GP1", "green", [ "h0" ] ],
+    [ "wokwi-rgb-led-1:R", "pico:GP6", "orange", [ "v0" ] ],
+    [ "wokwi-rgb-led-1:G", "pico:GP7", "orange", [ "v0" ] ],
+    [ "wokwi-rgb-led-1:B", "pico:GP8", "orange", [ "v0" ] ]
   ],
   "dependencies": {}
 }
