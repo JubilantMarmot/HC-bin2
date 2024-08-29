@@ -1,8 +1,8 @@
 import machine
 
-r = machine.Pin(2, machine.Pin.OUT)
-g = machine.Pin(1, machine.Pin.OUT)
-b = machine.Pin(0, machine.Pin.OUT)
+r = machine.Pin(6, machine.Pin.OUT)
+g = machine.Pin(7, machine.Pin.OUT)
+b = machine.Pin(8, machine.Pin.OUT)
 def set_color(red, green, blue):
     r.value(red)
     g.value(green)
