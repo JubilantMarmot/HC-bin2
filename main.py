@@ -5,9 +5,15 @@ from led_controller import set_color, temperature_to_color
 
 def main():
     while True:
-        temperature = int(read_temperature())
+        temperature, hum = read_temperature()
+        temperature = int(temperature)
+        hum = int(hum)
+
         update_display(temperature)
         temperature_to_color(temperature)
+        time.sleep(0.5)
+
+        update_display(hum)
         time.sleep(0.5)
 
 if __name__ == "__main__":
