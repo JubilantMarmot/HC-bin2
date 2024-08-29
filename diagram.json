@@ -11,13 +11,6 @@
       "attrs": { "env": "micropython-20231227-v1.22.0" }
     },
     {
-      "type": "wokwi-ntc-temperature-sensor",
-      "id": "ntc1",
-      "top": -131.8,
-      "left": 153,
-      "attrs": {}
-    },
-    {
       "type": "wokwi-tm1637-7segment",
       "id": "wokwi-tm1637-7segment-1",
       "top": 182.36,
@@ -30,12 +23,16 @@
       "top": -53.6,
       "left": -37.3,
       "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "wokwi-dht22-1",
+      "top": 19.5,
+      "left": -139.8,
+      "attrs": { "temperature": "54.6" }
     }
   ],
   "connections": [
-    [ "ntc1:VCC", "pico:3V3", "red", [ "h19.2", "v57.6", "h-124.8", "v67.2" ] ],
-    [ "ntc1:OUT", "pico:GP26", "green", [ "h9.6", "v163.1" ] ],
-    [ "ntc1:GND", "pico:GND.8", "black", [ "h28.8", "v57.6", "h-144", "v57.6" ] ],
     [ "wokwi-tm1637-7segment-1:VCC", "pico:3V3", "red", [ "h144", "v-201.6" ] ],
     [ "wokwi-tm1637-7segment-1:DIO", "pico:GP17", "violet", [ "h134.4", "v-57.6" ] ],
     [ "wokwi-tm1637-7segment-1:CLK", "pico:GP16", "violet", [ "h124.8", "v-38.4" ] ],
@@ -43,7 +40,10 @@
     [ "wokwi-rgb-led-1:COM", "pico:GND.1", "green", [ "v0" ] ],
     [ "wokwi-rgb-led-1:R", "pico:GP2", "orange", [ "v0" ] ],
     [ "wokwi-rgb-led-1:G", "pico:GP1", "orange", [ "v0" ] ],
-    [ "wokwi-rgb-led-1:B", "pico:GP0", "orange", [ "v0" ] ]
+    [ "wokwi-rgb-led-1:B", "pico:GP0", "orange", [ "v0" ] ],
+    [ "pico:GP22", "wokwi-dht22-1:SDA", "green", [ "h0" ] ],
+    [ "wokwi-dht22-1:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "wokwi-dht22-1:GND", "pico:GND.4", "black", [ "v0" ] ]
   ],
   "dependencies": {}
 }
