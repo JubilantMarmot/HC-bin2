@@ -44,6 +44,13 @@
       "top": 73.6,
       "left": 197.6,
       "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "wokwi-analog-joystick-1",
+      "top": 9,
+      "left": -244.2,
+      "attrs": {}
     }
   ],
   "connections": [
@@ -52,7 +59,6 @@
     [ "wokwi-dht22-1:GND", "pico:GND.4", "black", [ "v0" ] ],
     [ "wokwi-pir-motion-sensor-1:VCC", "pico:3V3", "red", [ "v0" ] ],
     [ "wokwi-pir-motion-sensor-1:GND", "pico:GND.8", "black", [ "v0" ] ],
-    [ "wokwi-pir-motion-sensor-1:OUT", "pico:GP28", "green", [ "v76.8", "h-58.94" ] ],
     [ "wokwi-photoresistor-sensor-1:DO", "pico:GP5", "green", [ "h86.4", "v85.8" ] ],
     [ "wokwi-photoresistor-sensor-1:GND", "pico:GND.1", "black", [ "h0" ] ],
     [ "wokwi-photoresistor-sensor-1:VCC", "pico:3V3", "red", [ "h0" ] ],
@@ -62,7 +68,13 @@
     [ "wokwi-lcd1602-1:SCL", "pico:GP1", "green", [ "h0" ] ],
     [ "wokwi-rgb-led-1:R", "pico:GP6", "orange", [ "v0" ] ],
     [ "wokwi-rgb-led-1:G", "pico:GP7", "orange", [ "v0" ] ],
-    [ "wokwi-rgb-led-1:B", "pico:GP8", "orange", [ "v0" ] ]
+    [ "wokwi-rgb-led-1:B", "pico:GP8", "orange", [ "v0" ] ],
+    [ "wokwi-analog-joystick-1:GND", "pico:GND.4", "black", [ "v0" ] ],
+    [ "wokwi-analog-joystick-1:VCC", "pico:3V3", "red", [ "v38.4", "h364.8", "v-134.4" ] ],
+    [ "wokwi-pir-motion-sensor-1:OUT", "pico:GP16", "green", [ "v0" ] ],
+    [ "wokwi-analog-joystick-1:VERT", "pico:GP28", "green", [ "v0" ] ],
+    [ "wokwi-analog-joystick-1:HORZ", "pico:GP27", "green", [ "v0" ] ],
+    [ "wokwi-analog-joystick-1:SEL", "pico:GP13", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
