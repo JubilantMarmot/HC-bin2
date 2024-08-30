@@ -2,12 +2,14 @@
 
 This is a pretty cool but simple project. RGB LED and a screen that shows you the temperature. Both when it is hot and cold!
 
-Try it here! https://wokwi.com/projects/407498035301430273
+Additionally, there is a joystick for menu selection, but that is not implemented yet. This is for [redacted for privacy] school for the Electronics Club demo next Thursday.
+
+Try it here! https://wokwi.com/projects/407498035301430273 
 
 ## Todo in the future
 
-- Add more sensors
--Change the screen to ssd1306 so I can fi more stuff!
+- Make the joystick do stuff other than reading it
+- Add RTC and storage for timeseries data?
 
 ## Screenshots
 
