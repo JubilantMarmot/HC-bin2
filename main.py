@@ -4,6 +4,7 @@ from display_controller import lcd
 from led_controller import set_color, temperature_to_color
 from motion_sensor import motion_sensor
 from light_sensor import light_sensor
+from joystick import get_joystick
 
 def main():
     print("Entering main loop")    
@@ -26,7 +27,8 @@ def main():
             sensed_light = light_sensor.value()
             if sensed_light:
                 print(f"Light detected: {sensed_light}")
-            
+
+            get_joystick()
             time.sleep(0.5)
         
         except Exception as e:
